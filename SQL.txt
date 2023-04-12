@@ -1,0 +1,77 @@
+CREATE Table student(
+  id INT NOT NULL,
+  name varchar,
+  surname varchar,
+  email varchar,
+  address varchar,
+  birthday varchar,
+  gender varchar,
+  address_2 varchar,
+  apartment varchar
+)
+
+INSERT INTO student(id, name, surname, email, address, birthday, gender, address_2, apartment)
+VALUES (1,"Bob", "Smith", "bobSmith@gmail.com","Tbilisis", "10.10.2000", "Male", "Batumi", "n9" )
+
+CREATE Table lecturer(
+  id INT NOT NULL,
+  name varchar,
+  surname varchar,
+  email varchar,
+  bill__number varchar,
+  rang varchar,
+  address varchar,
+  birthday varchar,
+  gender varchar,
+  address_2 varchar,
+  apartment varchar
+)
+
+INSERT INTO lecturer(id, name, surname, email,  bill__number,rang,address ,birthday ,gender , address_2 , apartment)
+VALUES (1,"John", "Doe", "johnDoe@gmail.com", 134763256, "Senior Assistant", "Tbilisi", "07.07.1975", "Male", "Kutaisi", "n7" )
+
+
+CREATE Table assistant(
+  id INT NOT NULL,
+  name varchar,
+  surname varchar,
+  email varchar,
+  address varchar,
+  birthday varchar,
+  gender varchar,
+  address_2 varchar,
+  apartment varchar
+)
+
+INSERT INTO Assistant(id, name, surname, email,address ,birthday ,gender , address_2 , apartment)
+VALUES (1,"Jane", "Doe", "janeDoe@gmail.com", "Tbilisi", "08.08.1985", "Female", "Kutaisi", "n10" )
+
+CREATE Table study_subjects (
+  id INT NOT NULL,
+  name varchar,
+  lecture__time datetime
+)
+
+INSERT INTO study_subjects (id, name, lecture__time)
+VALUES (1, "python", "13:00")
+
+CREATE Table faculty (
+id INT NOT NULL,
+name varchar,
+study_subjects int
+)
+
+INSERT INTO faculty (id, name, study_subjects)
+VALUES (1, "IT-faculty", 1)
+
+CREATE Table course (
+  id INT NOT NULL,
+  name varchar,
+  student int,
+  lecturer int,
+  assistant int,
+  faculty int 
+)
+
+INSERT INTO Course (id, name, student, lecturer, assistant, faculty)
+VALUES (1, "Web-development", 1,1,1,1)
